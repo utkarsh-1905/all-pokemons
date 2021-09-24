@@ -1,9 +1,10 @@
 * {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 900;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 900;
 }
 
 body {
+  width: 100%;
   margin: auto;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -22,7 +23,7 @@ h1 {
   /* animation: scaling 2.25s normal linear infinite; */
   font-size: xx-large;
   color: transparent;
-  transform: scale(2.8,2.8);
+  transform: scale(2.8, 2.8);
 }
 
 div {
@@ -34,20 +35,27 @@ div {
 .container img {
   display: block;
   padding: 10px;
-  transform: scale(1.7,1.7);
+  transform: scale(1.7, 1.7);
 }
 
-.container span{
-    font-weight: 900;
-    /* color:transparent;
+.container span {
+  font-weight: 900;
+  /* color:transparent;
     animation: color-change-3x 2s linear infinite alternate both; */
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 380px) {
+    div{
+        margin: 8px;
+    }
   .container img {
     margin: auto;
     padding: 3px;
+    transform: scale(0.9,0.9);
+  }
+  h1{
+      transform: scale(1.1,0.9);
   }
 }
 
