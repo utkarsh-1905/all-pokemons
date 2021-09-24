@@ -11,6 +11,7 @@ body {
   background-image: url("assets/bg-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position:center center;
   background-attachment: fixed;
 }
 
@@ -35,7 +36,7 @@ div {
 .container img {
   display: block;
   padding: 10px;
-  transform: scale(1.7, 1.7);
+  transform: scale(1.5, 1.5);
 }
 
 .container span {
@@ -45,7 +46,10 @@ div {
   color: whitesmoke;
 }
 
-@media only screen and (max-width: 380px) {
+@media (max-width: 500px) {
+    body{
+        background-image: url('assets/bg-3-mobile.jpg');
+    }
     div{
         margin: 8px;
     }
@@ -54,6 +58,7 @@ div {
     padding: 3px;
     transform: scale(0.9,0.9);
   }
+
   h1{
       transform: scale(1.1,0.9);
   }

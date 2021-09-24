@@ -1,5 +1,7 @@
 const container = document.querySelector(".container");
 
+alert('Reload 2-3 times for Best Experience!!');
+
 // https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png
 
 // Using PokeAPI in this Branch
