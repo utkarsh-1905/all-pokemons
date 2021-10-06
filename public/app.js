@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 
-alert('Reload 2-3 times for Best Experience!!');
+// alert('Reload 2-3 times for Best Experience!!');
 
 // https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png
 
@@ -24,7 +24,7 @@ for (let i = 1; i <= 665; i++) {
   // img.src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`;
   // span.innerText=`#${i}`;
 
-  get_data(`https://pokeapi.co/api/v2/pokemon-form/${i}/`).then((data) => {
+  setTimeout(get_data(`https://pokeapi.co/api/v2/pokemon-form/${i}/`).then((data) => {
     img.src = `${data.sprites.front_default}`;
     span.innerText = `${i}.) ${(data.name).charAt(0).toUpperCase()}${(data.name).slice(1)}`;
     div.classList.add("align");
@@ -32,5 +32,5 @@ for (let i = 1; i <= 665; i++) {
     div.appendChild(img);
     div.appendChild(span);
     container.appendChild(div);
-  });
+  }),1000);
 }
