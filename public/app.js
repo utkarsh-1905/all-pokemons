@@ -14,7 +14,7 @@ async function get_data(poke_url) {
   return data;
 }
 
-for (let i = 1; i <= 665; i++) {
+for (let i = 1; i <= 151; i++) {
   const div = document.createElement("div");
   const img = document.createElement("img");
   const span = document.createElement("span");
@@ -24,13 +24,14 @@ for (let i = 1; i <= 665; i++) {
   // img.src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`;
   // span.innerText=`#${i}`;
 
-  setTimeout(get_data(`https://pokeapi.co/api/v2/pokemon-form/${i}/`).then((data) => {
+  get_data(`https://pokeapi.co/api/v2/pokemon-form/${i}/`).then((data) => {
+    console.log(data);
     img.src = `${data.sprites.front_default}`;
-    span.innerText = `${i}.) ${(data.name).charAt(0).toUpperCase()}${(data.name).slice(1)}`;
+    span.innerText = `${(data.name).charAt(0).toUpperCase()}${(data.name).slice(1)}`;
     div.classList.add("align");
 
     div.appendChild(img);
     div.appendChild(span);
     container.appendChild(div);
-  }),1000);
+  })
 }
